@@ -22,16 +22,10 @@ function createAccordionData() {
         return `
             <div class="accordion-item">
                 <button class="accordion-button">${faq.question}</button>
+                
                 <div class="accordion-content">${faq.answer}</div>
+                <i class="fa-solid fa-arrow-up"></i>
             </div>
         `;
     }).join("");
-
-document.querySelector('.accordion').innerHTML = faqData.map(faq => {
-    return `
-        <div class="accordion-item">
-            <button class="accordion-button">${faq.question}</button>
-            <div class="accordion-content">${faq.answer}</div>
-        </div>
-    `;
-}).join("");
+}
